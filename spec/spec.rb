@@ -4,13 +4,9 @@ require 'spec_helper'
 ##Modules##
 ###########
 
-include Post
-
 include Get
-
-
-puts 'DEAE ANCASTAE GEMINVS MANI VSLM' 
-
+include Post
+include PostAdd
 
 ##################
 ##Test procedure##
@@ -18,67 +14,99 @@ puts 'DEAE ANCASTAE GEMINVS MANI VSLM'
 
 begin
 
-## <Get> 
+
+
+## <Get> example
+
+## runs module tests
 	describe('<Get>') do
-	  it('/<status should return a 200>') do
-		response = Status.status
+	  it('/<GET should return a 200>') do
+		response = Get.get
 		log = JSON.parse(response) 
+
+## checks for API response code and writes passing json response to file
 	if
 		response.code == (200)
-		File.open("tempfile1.json", 'a') {|f| f.write('TEST <Get>') }
-		File.open("tempfile1.json", 'a') {|f| f.write(JSON.pretty_generate(log)) }
+		File.open("tempGet.json", 'a') {|f| f.write('TEST <Get>') }
+		File.open("tempGet.json", 'a') {|f| f.write(JSON.pretty_generate(log)) }
 		puts "<Get>"
 		puts JSON.pretty_generate(log)
+
+## takes failing response and writes failing json response to file	
 	else
-		File.open("failtempfile1.json", 'a') {|f| f.write("TEST <Get>") }
-		File.open("failtempfile1.json", 'a') {|f| f.write(JSON.pretty_generate(log)) }
+		File.open("failTempGet.json", 'a') {|f| f.write("TEST <Get>") }
+		File.open("failTempGet.json", 'a') {|f| f.write(JSON.pretty_generate(log)) }
 		expect(response.code).to be (200)
 	
 	end  
 end	
 
 
-## <Post>
 
-	 describe('Loginok') do
-		it('POST /loginok should return a 200') do
-		response = Loginok.loginok
+
+
+## <Post> example
+
+## runs module tests
+	 describe('<Post>') do
+		it('/<POST should return a 200>') do
+		response = Post.post
 		log = JSON.parse(response) 
+
+## checks for API response code and writes passing json response to file		
 	if
 		response.code == (200)
-		File.open("AlphaLogMC.json", 'a') {|f| f.write('TEST Login OK') }
-		File.open("AlphaLogMC.json", 'a') {|f| f.write(JSON.pretty_generate(log)) }
-		puts "LoginOK"
+		File.open("tempPost.json", 'a') {|f| f.write('TEST <Post>') }
+		File.open("tempPost.json", 'a') {|f| f.write(JSON.pretty_generate(log)) }
+		puts "<Post>"
 		puts JSON.pretty_generate(log)
-		securityToken = JSON.parse(response.body) ['response']['body']['securityToken']
-		File.open("ST.txt", 'a') {|f| f.write(securityToken) }		
+
+## finds specified parameter in json response [nested] and writes to file		
+		parameter = JSON.parse(response.body) ['response']['body']['<parameter>']
+		File.open("tempParameter.txt", 'a') {|f| f.write(parameter) }		
+
+## takes failing response and writes failing json response to file	
 	else
-		File.open("FailLogAlphaMC.json", 'a') {|f| f.write("TEST Login OK") }
-		File.open("FailLogAlphaMC.json", 'a') {|f| f.write(JSON.pretty_generate(log)) }
+		File.open("failTempPost.json", 'a') {|f| f.write("<Post>") }
+		File.open("failTempPost.json", 'a') {|f| f.write(JSON.pretty_generate(log)) }
 		expect(response.code).to be (200)
 	
 	end
-	## <PostAdd>
+end
 
-	 describe('Loginok') do
-		it('POST /loginok should return a 200') do
-		response = Loginok.loginok
+
+
+
+
+## <PostAdd> example
+
+## runs module tests
+	 describe('<PostAdd>') do
+		it('/POSTADD should return a 200') do
+		response = PostAdd.postadd
 		log = JSON.parse(response) 
+
+## checks for API response code and writes passing json response to file	
 	if
 		response.code == (200)
-		File.open("AlphaLogMC.json", 'a') {|f| f.write('TEST Login OK') }
-		File.open("AlphaLogMC.json", 'a') {|f| f.write(JSON.pretty_generate(log)) }
-		puts "LoginOK"
+		File.open("tempPostAdd.json", 'a') {|f| f.write('TEST Login OK') }
+		File.open("tempPostAdd.json", 'a') {|f| f.write(JSON.pretty_generate(log)) }
+		puts "<PostAdd>"
 		puts JSON.pretty_generate(log)
-		securityToken = JSON.parse(response.body) ['response']['body']['securityToken']
-		File.open("ST.txt", 'a') {|f| f.write(securityToken) }		
+
+## finds specified parameter in json response [nested] and writes to file	
+		parameter = JSON.parse(response.body) ['response']['body']['<parameter>']
+		File.open("tempParameter.txt", 'a') {|f| f.write(parameter) }		
+
+## takes failing response and writes failing json response to file	
 	else
-		File.open("FailLogAlphaMC.json", 'a') {|f| f.write("TEST Login OK") }
-		File.open("FailLogAlphaMC.json", 'a') {|f| f.write(JSON.pretty_generate(log)) }
+		File.open("failTempPostAdd.json", 'a') {|f| f.write("TEST Login OK") }
+		File.open("failTempPostAdd.json", 'a') {|f| f.write(JSON.pretty_generate(log)) }
 		expect(response.code).to be (200)
 	
 	end    
 end	 
+end
 end
 end
 end
