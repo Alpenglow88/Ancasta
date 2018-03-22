@@ -28,6 +28,8 @@ begin
 		puts "<Film List>"
 		puts JSON.pretty_generate(log)
 
+
+
 ## takes failing response and writes failing json response to file	
 	else
 		puts "Get film list failed - see log for response"
@@ -35,7 +37,40 @@ begin
 		File.open("failFilmList.json", 'a') {|f| f.write(JSON.pretty_generate(log)) }
 		expect(response.code).to be (200)
 	
-	end  
+	end
+end
+
+
+
+
+## runs module tests
+	describe('<Get Totoro>') do
+	  it('/<Get Totoro should return a 200>') do
+		response = Ghibli.film
+		log = JSON.parse(response) 
+
+	if
+		response.code == (200)
+		File.open("totoro.json", 'a') {|f| f.write('TEST Totoro Description') }
+		File.open("totoro.json", 'a') {|f| f.write(JSON.pretty_generate(log)) }
+
+		totoroDescription = JSON.parse(response.body)['description']
+		File.open("totoroDescription.json", 'a') {|f| f.write(totoroDescription) }
+
+		puts "<Totoro Description>"
+		puts JSON.pretty_generate(log)
+
+	else
+		puts "Get film list failed - see log for response"
+		File.open("failFilmList.json", 'a') {|f| f.write("TEST <Film_List>") }
+		File.open("failFilmList.json", 'a') {|f| f.write(JSON.pretty_generate(log)) }
+		expect(response.code).to be (200)
+	
+	end
+
+
+
 end	
+end
 end
 end
