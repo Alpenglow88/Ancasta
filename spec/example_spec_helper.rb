@@ -9,5 +9,4 @@ require './api_test_case/get'
 require './api_test_case/post'
 require './api_test_case/postadd'
 
-require './api_test_case/ghibli'
 
