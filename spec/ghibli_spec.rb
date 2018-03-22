@@ -30,6 +30,7 @@ begin
 
 ## takes failing response and writes failing json response to file	
 	else
+		puts "Get film list failed - see log for response"
 		File.open("failFilmList.json", 'a') {|f| f.write("TEST <Film_List>") }
 		File.open("failFilmList.json", 'a') {|f| f.write(JSON.pretty_generate(log)) }
 		expect(response.code).to be (200)
