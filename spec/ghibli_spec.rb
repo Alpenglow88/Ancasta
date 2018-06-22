@@ -28,8 +28,6 @@ begin
 		puts "<Film List>"
 		puts JSON.pretty_generate(log)
 
-
-
 ## takes failing response and writes failing json response to file	
 	else
 		puts "Get film list failed - see log for response"
@@ -68,9 +66,9 @@ end
 	
 	end
 
-
+end
 
 end	
 end
 end
-end
+

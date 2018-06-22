@@ -7,7 +7,7 @@ Examples have been made using publicly open APIs for demonstration purposes and 
 
 
 ## Usage:
-The RSpec commands are contained witin Rake tasks and can be run int he following ways:
+The RSpec commands are contained witin Rake tasks and can be run in the following ways:
 
 ```ruby
 
