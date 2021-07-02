@@ -3,6 +3,10 @@
 require 'rest-client'
 # Example module for hitting Studio Ghible Film and Films api endpoints
 module Ghibli
+  def hello
+    puts hello
+  end
+  
   def films
     RestClient.get 'https://ghibliapi.herokuapp.com/films'
   rescue StandardError => e

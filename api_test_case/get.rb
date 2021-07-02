@@ -3,7 +3,7 @@
 require 'rest-client'
 # Description of what the module is/does
 module Get
-  def get
+  def get_method
     RestClient.get 'URL'
   rescue StandardError => e
     e.response

@@ -3,7 +3,7 @@
 require 'rest-client'
 # Description of what the module is/does
 module PostAdd
-  def postadd
+  def postadd_method
     file = File.open('temp1.txt', 'r')
     authparam = file.read
 

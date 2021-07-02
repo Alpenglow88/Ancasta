@@ -3,7 +3,7 @@
 require 'rest-client'
 # Description of what the module is/does
 module Post
-  def post
+  def post_method
     RestClient.post 'URL',
                     { parameter1: 'parameter1', parameter2: 'parameter2' }
   rescue StandardError => e

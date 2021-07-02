@@ -10,7 +10,7 @@ require 'ghibli_helper'
 describe('<Get Films>') do
   include Ghibli
   it('/<Get Films should return a 200>') do
-    response = Ghibli.films
+    response = films
     log = JSON.parse(response)
 
     ## checks for API response code and writes passing json response to file
@@ -34,7 +34,7 @@ describe('<Get Films>') do
   describe('<Get Totoro>') do
     include Ghibli
     it('/<Get Totoro should return a 200>') do
-      response = Ghibli.film
+      response = film
       log = JSON.parse(response)
 
       if response.code == (200)

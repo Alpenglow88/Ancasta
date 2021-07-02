@@ -55,7 +55,7 @@ GEM
     unicode-display_width (2.0.0)
 
 PLATFORMS
-  x86_64-darwin-19
+  ruby
 
 DEPENDENCIES
   rake
@@ -64,4 +64,4 @@ DEPENDENCIES
   rubocop
 
 BUNDLED WITH
-   2.2.21
+   1.17.3
