@@ -1,12 +1,11 @@
+# frozen_string_literal: true
+
 require 'rest-client'
-
+# Description of what the module is/does
 module Get
-
-def get
-	begin
-		return RestClient.get 'URL'
-	rescue => e
-		return e.response
-	end
-end
+  def get
+    RestClient.get 'URL'
+  rescue StandardError => e
+    e.response
+  end
 end
