@@ -1,0 +1,7 @@
+AllCops:
+  NewCops: enable
+
+Metrics/BlockLength:
+  Enabled: true
+  Max: 120
+  CountComments: false

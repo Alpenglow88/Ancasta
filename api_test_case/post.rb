@@ -1,16 +1,12 @@
+# frozen_string_literal: true
+
 require 'rest-client'
-
+# Description of what the module is/does
 module Post
-
-def post
-	begin
-		
-	return RestClient.post 'URL',  
-			{:parameter1 => 'parameter1', :parameter2 => 'parameter2'} 
-	rescue => e
-		return e.response
-	end
+  def post_method
+    RestClient.post 'URL',
+                    { parameter1: 'parameter1', parameter2: 'parameter2' }
+  rescue StandardError => e
+    e.response
+  end
 end
-end
-
-
