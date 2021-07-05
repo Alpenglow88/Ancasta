@@ -10,7 +10,7 @@ GEM
       domain_name (~> 0.5)
     mime-types (3.3.1)
       mime-types-data (~> 3.2015)
-    mime-types-data (3.2021.0225)
+    mime-types-data (3.2021.0704)
     netrc (0.11.0)
     parallel (1.20.1)
     parser (3.0.1.1)
@@ -37,7 +37,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.10.0)
     rspec-support (3.10.2)
-    rubocop (1.18.1)
+    rubocop (1.18.2)
       parallel (~> 1.10)
       parser (>= 3.0.0.0)
       rainbow (>= 2.2.2, < 4.0)
@@ -55,7 +55,7 @@ GEM
     unicode-display_width (2.0.0)
 
 PLATFORMS
-  ruby
+  x86_64-darwin-19
 
 DEPENDENCIES
   rake
@@ -64,4 +64,4 @@ DEPENDENCIES
   rubocop
 
 BUNDLED WITH
-   1.17.3
+   2.2.21
