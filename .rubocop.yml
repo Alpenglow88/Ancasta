@@ -1,3 +1,7 @@
+require:
+  - rubocop-rspec
+  - rubocop-rake
+
 AllCops:
   NewCops: enable
 
@@ -5,3 +9,9 @@ Metrics/BlockLength:
   Enabled: true
   Max: 120
   CountComments: false
+
+RSpec/FilePath:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Enabled: false

@@ -4,6 +4,7 @@ A simple RESTful api test framework using RSpec and Rake
 
 Examples have been made using publicly open APIs for demonstration purposes and templates are given in order to allow future tests and *spec.rb files to be created
 
+Works with ruby version >=2.6.X
 
 
 ## Usage:
@@ -11,7 +12,7 @@ The RSpec commands are contained witin Rake tasks and can be run in the followin
 
 ```ruby
 
-rake spec
+rake test
 
 ```
 
