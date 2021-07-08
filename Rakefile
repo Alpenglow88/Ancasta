@@ -3,7 +3,7 @@
 require 'rspec/core/rake_task'
 
 task default: [:spec]
-RSpec::Core::RakeTask.new(:spec) do |t|
+RSpec::Core::RakeTask.new(:test) do |t|
   t.rspec_opts = '--pattern spec/*_spec.rb'
 end
 
