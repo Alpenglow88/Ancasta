@@ -6,6 +6,7 @@ module Functions
   # regardless of ordering
   def top_3_check(url1, url2)
     array = []
+
     response1 = JSON.parse(RestClient.get(url1))
     response2 = JSON.parse(RestClient.get(url2))
 

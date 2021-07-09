@@ -1,20 +1,20 @@
 # frozen_string_literal: true
 
-describe('Endpoint_Testing') do
+describe('DemoSpec') do
   include Bases
   include Functions
-  include Parameters
+  include DemoParameters
 
   it('Top three entries are in sync - THIS SHOULD PASS') do
-    url = base_1 + films_params
-    url2 = base_1 + films_params
+    url = base1 + films_params
+    url2 = base2 + films_params
 
     top_3_check(url, url2)
   end
 
   it('Top three entries are out of sync - THIS SHOULD FAIL') do
-    url = base_1 + films_params
-    url2 = base_1 + films_params
+    url = base1 + films_params
+    url2 = base2 + films_params
 
     array = []
 

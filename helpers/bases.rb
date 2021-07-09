@@ -2,12 +2,11 @@
 
 # Base URLs used in testing ##
 module Bases
-  def base_1
+  def base1
     'https://ghibliapi.herokuapp.com'
   end
 
-  def base_2
+  def base2
     'https://ghibliapi.herokuapp.com'
   end
-
 end

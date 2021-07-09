@@ -29,6 +29,13 @@ rake singleSpec[specname]
 
 to run a single *_spec.rb within the /spec folder
 
+If you need to build the tests from a new source then you must run the following
+```ruby
+rake build
+```
+
+you must also make sure you update the source file on line 25 of `./scripts/build.rb`
+
 
 Output from these runs are all stored in the `./reports` folder and can be viewed by opening the `overview.html` document within the timestamped folder.
 
