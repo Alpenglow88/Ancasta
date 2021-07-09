@@ -10,3 +10,4 @@ gem 'rspec_html_reporter'
 gem 'rubocop'
 gem 'rubocop-rake', require: false
 gem 'rubocop-rspec', require: false
+gem 'net-http'

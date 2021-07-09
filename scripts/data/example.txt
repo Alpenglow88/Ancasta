@@ -1,0 +1,6 @@
+/films
+/searchserver/catalogs/1802/prefix?q=sal%20salv&start=0&rightsFilter=2&contentTypes=albums%2Cartists%2Ctracks&locale=&perTypeLimit=5
+/searchserver/catalogs/1802/prefix?q=ka7&start=0&rightsFilter=2&contentTypes=albums&locale=&perTypeLimit=20
+/searchserver/catalogs/1802/prefix?q=ka'Ano'&start=0&rightsFilter=2&contentTypes=albums&locale=&perTypeLimit=20
+/searchserver/catalogs/1802/prefix?q=ka'Ano'i&start=40&rightsFilter=2&contentTypes=artists&locale=&perTypeLimit=20
+/searchserver/catalogs/1802/prefix?q=%20ka'Ano'i&start=40&rightsFilter=2&contentTypes=artists&locale=&perTypeLimit=20
